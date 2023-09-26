@@ -10,7 +10,6 @@ public class Deer : MonoBehaviour
     private float amplitude = 3f;
     private Vector3 originalScale;
 
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,28 +19,19 @@ public class Deer : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.x > amplitude)
-        {
-            MoveToDirection(Vector2.left);
-        }
-        else if (transform.position.x < -amplitude)
-        {
-            MoveToDirection(Vector2.right);
-        }
-
-        lifeTime -= Time.deltaTime;
-        if (lifeTime <= 0)
-        {
-            Destroy(gameObject);
-        }
+        MoveToDirection(Vector2.right);
     }
 
     private void MoveToDirection(Vector2 direction)
     {
-        rb.velocity = direction * speed;
+        direction.x = Mathf.Max(direction.x, 0);
 
-        transform.localScale = new Vector3(direction.x < 0 ? -originalScale.x : originalScale.x, originalScale.y,
-            originalScale.z);
+        float randomizedSpeed = Random.Range(1f, 10f);
+
+        rb.velocity = direction.normalized * randomizedSpeed;
+
+        // Optionally, you can flip the object's scale based on the direction.
+        transform.localScale = new Vector3(originalScale.x, originalScale.y, originalScale.z);
     }
 
     public void onHit()

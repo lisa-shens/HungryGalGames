@@ -495,6 +495,7 @@ MonoBehaviour:
   spriteSelected: {fileID: 0}
   laserLineRenderer: {fileID: 53868489}
   targetRenderer: {fileID: 53868490}
+  deerScript: {fileID: 1815588336}
 --- !u!1 &1106003116
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,6 +690,7 @@ MonoBehaviour:
   spriteSelected: {fileID: 0}
   laserLineRenderer: {fileID: 53868489}
   targetRenderer: {fileID: 53868490}
+  deerScript: {fileID: 1815588336}
 --- !u!1 &1475462935
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,6 +793,7 @@ MonoBehaviour:
   spriteSelected: {fileID: 0}
   laserLineRenderer: {fileID: 53868489}
   targetRenderer: {fileID: 53868490}
+  deerScript: {fileID: 1815588336}
 --- !u!114 &1475462939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,7 +938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3e1e64ce7de74ed4af1b048c6713e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnWidth: 5
+  spawnWidth: 10
   spawnRate: 0.3
   deerPrefab: {fileID: 3592181612308341625, guid: c66ea687ca6824453bb6fbf87bbf2705, type: 3}
   frames: []

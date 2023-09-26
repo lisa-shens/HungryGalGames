@@ -10,6 +10,7 @@ public class Spear : MonoBehaviour
 	public LineRenderer laserLineRenderer;
 	public SpriteRenderer targetRenderer;
 	private bool rendered = false;
+	public DeerSpawn deerScript;
 
 	private void Start()
     {
@@ -24,6 +25,7 @@ public class Spear : MonoBehaviour
 			rendered = true;
 			crosshair = targetRenderer.gameObject;
 			UpdateCrosshair(GetMouseWorldPosition());
+			deerScript.StartSpawning();
 
 		}
 		else if (rendered == true && crosshair)
