@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1774432966803094888
+--- !u!1 &1456403070511745087
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8641250527700909469}
-  - component: {fileID: 5627029076900179126}
-  - component: {fileID: 8917881843948254683}
-  - component: {fileID: -8060836912843855475}
-  - component: {fileID: -6029847927091177124}
-  - component: {fileID: 4966052445618017552}
+  - component: {fileID: 7395387778732481654}
+  - component: {fileID: 3673003580348900059}
+  - component: {fileID: 3077569623558073992}
+  - component: {fileID: 3188177230165387498}
+  - component: {fileID: 1371307229782962734}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: bee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8641250527700909469
+--- !u!4 &7395387778732481654
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774432966803094888}
+  m_GameObject: {fileID: 1456403070511745087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.722, y: -3.9948, z: 0}
-  m_LocalScale: {x: 1.0966387, y: 0.92755264, z: 1}
+  m_LocalPosition: {x: -7.305852, y: -2.5841715, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5627029076900179126
+--- !u!212 &3673003580348900059
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774432966803094888}
+  m_GameObject: {fileID: 1456403070511745087}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,41 +75,26 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f95182d5e3a5a490c85ca2f45681a0c5, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 1875761139, guid: eb2087a6e06ae47c4a20a2e76a110732, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.25, y: 2.25}
+  m_Size: {x: 0.92, y: 0.89}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8917881843948254683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774432966803094888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
-  m_EffectDistance: {x: 1, y: -1}
-  m_UseGraphicAlpha: 1
---- !u!50 &-8060836912843855475
+--- !u!50 &3077569623558073992
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774432966803094888}
+  m_GameObject: {fileID: 1456403070511745087}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -118,7 +102,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -130,13 +114,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!60 &-6029847927091177124
-PolygonCollider2D:
+--- !u!58 &3188177230165387498
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774432966803094888}
+  m_GameObject: {fileID: 1456403070511745087}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -159,56 +143,31 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 2.25}
-    newSize: {x: 2.25, y: 2.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.155, y: -0.445}
-      - {x: 0.065, y: -0.405}
-      - {x: 0.265, y: -0.185}
-      - {x: 0.695, y: 0.305}
-      - {x: 0.815, y: 0.45499998}
-      - {x: 0.815, y: 0.79499996}
-      - {x: 0.79499996, y: 0.815}
-      - {x: 0.45499998, y: 0.815}
-      - {x: 0.435, y: 0.79499996}
-      - {x: 0.33499998, y: 0.72499996}
-      - {x: 0.195, y: 0.575}
-      - {x: 0.105, y: 0.49499997}
-      - {x: -0.265, y: 0.125}
-      - {x: -0.445, y: 0.145}
-      - {x: -0.755, y: 0.13499999}
-      - {x: -0.695, y: -0.175}
-      - {x: -0.585, y: -0.13499999}
-      - {x: -0.815, y: -0.42499998}
-      - {x: -0.815, y: -0.73499995}
-      - {x: -0.705, y: -0.815}
-      - {x: -0.42499998, y: -0.815}
-      - {x: -0.33499998, y: -0.72499996}
-      - {x: -0.114999995, y: -0.745}
-      - {x: 0.175, y: -0.695}
-  m_UseDelaunayMesh: 0
---- !u!114 &4966052445618017552
+  serializedVersion: 2
+  m_Radius: 0.46
+--- !u!114 &1371307229782962734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774432966803094888}
+  m_GameObject: {fileID: 1456403070511745087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6352a56df22864b83991cea0ce8c6b79, type: 3}
+  m_Script: {fileID: 11500000, guid: 92e6921dee4064ae0aa1bafbf6336555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwDistance: 100
+  minSpeed: 4
+  maxSpeed: 10
+  lifeTime: 5
+  framesPerSecond: 5
+  frames:
+  - {fileID: 1875761139, guid: eb2087a6e06ae47c4a20a2e76a110732, type: 3}
+  - {fileID: -1390435258, guid: eb2087a6e06ae47c4a20a2e76a110732, type: 3}
+  - {fileID: -1118722697, guid: eb2087a6e06ae47c4a20a2e76a110732, type: 3}
+  - {fileID: -1383674569, guid: eb2087a6e06ae47c4a20a2e76a110732, type: 3}
+  - {fileID: 677791933, guid: eb2087a6e06ae47c4a20a2e76a110732, type: 3}

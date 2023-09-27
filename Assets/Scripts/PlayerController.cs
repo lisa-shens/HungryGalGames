@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
     private void FixedUpdate()
     {
         Vector2 movement = rb.velocity;
@@ -59,6 +60,16 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isJumping = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Animal animal = collision.gameObject.GetComponent<Animal>();
+        if (animal != null)
+        {
+            
+            // change to next scene
+        }
     }
 
     IEnumerator JumpAnimation()
@@ -80,4 +91,7 @@ public class PlayerController : MonoBehaviour
         isJumpAnimationPlaying = false; // Reset the flag to allow a new jump animation
         isJumping = false; // Set isJumping to false to indicate the jump animation is complete
     }
+
+
+
 }

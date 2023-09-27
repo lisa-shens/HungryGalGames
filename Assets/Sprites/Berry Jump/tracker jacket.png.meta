@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d35571c8f0b049b0a0e631829b1b663
+guid: eb2087a6e06ae47c4a20a2e76a110732
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: idle1
+      name: beedeath_0
       rect:
         serializedVersion: 2
-        x: 390
-        y: 784
-        width: 98
-        height: 113
+        x: 1043
+        y: 327
+        width: 68
+        height: 85
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,41 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73b05530811624d208b2a604773b81c3
-      internalID: 1642464316
+      spriteID: ed50242c0e1494ae7b4dee09fb8ece4f
+      internalID: 937587002
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle2
+      name: beedeath_1
       rect:
         serializedVersion: 2
-        x: 539
-        y: 784
-        width: 92
-        height: 113
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0214787fbd1db4db1adf11d30a2294bd
-      internalID: -313264090
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle3
-      rect:
-        serializedVersion: 2
-        x: 690
-        y: 782
+        x: 842
+        y: 332
         width: 81
-        height: 115
+        height: 90
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 899163b12835f4f7a93f17f5070c312e
-      internalID: -1641523144
+      spriteID: 21684b606a18f48bc9ef2b577c4acc64
+      internalID: 943189639
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle4
+      name: beedeath_2
       rect:
         serializedVersion: 2
-        x: 824
-        y: 782
-        width: 96
-        height: 115
+        x: 639
+        y: 323
+        width: 89
+        height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b75ad9ef5b29b481083cb575e6a7bdce
-      internalID: 266156148
+      spriteID: 27fb57f5fc9474cfda5b182e7aefc92e
+      internalID: 638905819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk1
+      name: beedeath_03
       rect:
         serializedVersion: 2
-        x: 405
-        y: 639
-        width: 90
-        height: 120
+        x: 438
+        y: 329
+        width: 116
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,103 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc2f5ceb2f0494da6be9076d57b5b8cf
-      internalID: -1466331499
+      spriteID: d5eabae80c0ac4233be5383fe08c1eb5
+      internalID: -1234463088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: walk2
+      name: beedeath_4
       rect:
         serializedVersion: 2
-        x: 549
-        y: 639
-        width: 84
-        height: 118
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 381b70f21962344f089bb07e5f8b6d42
-      internalID: 1414832979
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk3
-      rect:
-        serializedVersion: 2
-        x: 689
-        y: 637
-        width: 93
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 026b765b1f2b1406484ac3e05b2e5a5b
-      internalID: 1169715824
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk4
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 641
-        width: 92
-        height: 110
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4bbbc3bf32f774127a82192e2ff5cbea
-      internalID: 1837274302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk5
-      rect:
-        serializedVersion: 2
-        x: 983
-        y: 639
-        width: 76
-        height: 122
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e9bb4ab74e1e40f0ab82ec18be7c7d0
-      internalID: 1374285971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: walk6
-      rect:
-        serializedVersion: 2
-        x: 1122
-        y: 641
-        width: 94
+        x: 229
+        y: 318
+        width: 128
         height: 114
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -326,20 +221,104 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e914f2179dddf494fa9a07bd96c8b7ad
-      internalID: -939143899
+      spriteID: 66c033a686b4a4815b3de01ec0af523d
+      internalID: -990939277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump1
+      name: beedeath_5
       rect:
         serializedVersion: 2
-        x: 409
-        y: 209
+        x: 30
+        y: 313
+        width: 145
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df968d51c69e4a3996898b988988ca8
+      internalID: 1233752048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beefly_5
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 62
+        width: 86
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc54083edc2e4d0f892ec07c2ce6f63
+      internalID: 677791933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beefly_2
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 67
+        width: 75
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046a9d65e225e421c8c46f2a4150bac3
+      internalID: -1390435258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beefly_3
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 62
+        width: 91
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3619811a01d234a46833330fe3b5087f
+      internalID: -1118722697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: beefly_4
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 67
         width: 73
-        height: 112
+        height: 72
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b776287d6e153462ebd884b73c9fff3b
-      internalID: -1918907076
+      spriteID: 2de1e2ad151cd473c8c9e7ad0a9ba802
+      internalID: -1383674569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump2
+      name: beefly_1
       rect:
         serializedVersion: 2
-        x: 541
-        y: 216
-        width: 79
-        height: 103
+        x: 1024
+        y: 67
+        width: 92
+        height: 89
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,134 +347,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1674aefdf9dd24ac2b1f64b69ab999aa
-      internalID: 491847985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump3
-      rect:
-        serializedVersion: 2
-        x: 677
-        y: 214
-        width: 96
-        height: 105
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 19b5fb7c5743d4d97809188dfb83ba62
-      internalID: 1688454908
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump4
-      rect:
-        serializedVersion: 2
-        x: 826
-        y: 212
-        width: 84
-        height: 123
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: add565e3527d24b61a9a8e2c9ff377c5
-      internalID: 1560464667
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump5
-      rect:
-        serializedVersion: 2
-        x: 962
-        y: 212
-        width: 88
-        height: 136
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df7e36fb22e004536b30b948990c7831
-      internalID: 910598508
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: jump6
-      rect:
-        serializedVersion: 2
-        x: 1103
-        y: 212
-        width: 107
-        height: 115
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6ade3721b1a9433795927875999bb4c
-      internalID: 282654216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: swing_0
-      rect:
-        serializedVersion: 2
-        x: 417
-        y: 358
-        width: 65
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de25d01ed2512491abcdb989c15a8c30
-      internalID: -602482166
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: swing_1
-      rect:
-        serializedVersion: 2
-        x: 985
-        y: 360
-        width: 69
-        height: 103
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1301283bc45b4cfdb05c951bc401895
-      internalID: 33097743
+      spriteID: c8be8f210ac1a49b09d0907af9a5a296
+      internalID: 1875761139
       vertices: []
       indices: 
       edges: []
@@ -511,27 +364,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      idle1: 1642464316
-      idle2: -313264090
-      idle3: -1641523144
-      idle4: 266156148
-      jump1: -1918907076
-      jump2: 491847985
-      jump3: 1688454908
-      jump4: 1560464667
-      jump5: 910598508
-      jump6: 282654216
-      swing: 938952039
-      swing_0: -602482166
-      swing_1: 33097743
-      swing_2: 1492746977
-      swing_3: -1330596964
-      walk1: -1466331499
-      walk2: 1414832979
-      walk3: 1169715824
-      walk4: 1837274302
-      walk5: 1374285971
-      walk6: -939143899
+      beedeath_0: 937587002
+      beedeath_03: -1234463088
+      beedeath_1: 943189639
+      beedeath_2: 638905819
+      beedeath_4: -990939277
+      beedeath_5: 1233752048
+      beefly_0: 346089754
+      beefly_1: 1875761139
+      beefly_2: -1390435258
+      beefly_3: -1118722697
+      beefly_4: -1383674569
+      beefly_5: 677791933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

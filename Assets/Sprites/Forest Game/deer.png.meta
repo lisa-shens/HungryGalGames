@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d446b496681d74f5b8352dfb3d6cd20c
+guid: 0e86b19703eab48c398589ffa0aecd39
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 75
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerSwing_0
+      name: deerwalk_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 3
-        width: 49
-        height: 97
+        width: 30
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2747f20ecf1f46e1be991d52026e0cb
-      internalID: 1306304282
+      spriteID: 1d3e8cf3aeb3c4b7ca0bbc69f187a6cf
+      internalID: 928837092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerSwing_1
+      name: deerwalk_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 56
-        height: 102
+        x: 31
+        y: 3
+        width: 32
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca009484360a6482a826e121dfba9c53
-      internalID: -762157832
+      spriteID: f7dc9595eaa1342368ad6b7bd5de0c93
+      internalID: 497801326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerSwing_2
+      name: deerwalk_2
       rect:
         serializedVersion: 2
-        x: 176
+        x: 65
         y: 4
-        width: 61
-        height: 97
+        width: 30
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48518289ed68c43c0a254dfa991583b8
-      internalID: 728815683
+      spriteID: 8e5cd5a1be23d408cbd938948c2ea4aa
+      internalID: -1678232329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerSwing_3
+      name: deerwalk_3
       rect:
         serializedVersion: 2
-        x: 273
-        y: 5
-        width: 52
-        height: 95
+        x: 97
+        y: 2
+        width: 29
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 194e58744b99140c1a2232b614717305
-      internalID: 1240776613
+      spriteID: 23584fae4a14b4b1589f4552f7cb291c
+      internalID: -105749944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: deerwalk_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6896d7c1ec6944f74b581c3fa0eb27ec
+      internalID: -220273618
       vertices: []
       indices: 
       edges: []
@@ -217,10 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerSwing_0: 1306304282
-      PlayerSwing_1: -762157832
-      PlayerSwing_2: 728815683
-      PlayerSwing_3: 1240776613
+      deerwalk_0: 928837092
+      deerwalk_1: 497801326
+      deerwalk_2: -1678232329
+      deerwalk_3: -105749944
+      deerwalk_4: -220273618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

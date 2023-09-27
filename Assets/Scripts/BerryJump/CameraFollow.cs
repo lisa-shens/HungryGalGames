@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
     public Transform player;
     public float offsetY;
 
-    private void LateUpdate()
+    private void Update()
     {
         Vector3 position = transform.position;
         position.y = player.position.y + offsetY;
