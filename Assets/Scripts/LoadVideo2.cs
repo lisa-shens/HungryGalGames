@@ -16,6 +16,6 @@ public class LoadVideo2 : MonoBehaviour
     void OnVideoEnd(VideoPlayer vp)
     {
         // Load a new scene when the video ends
-        SceneManager.LoadScene("ReapingScene");
+        SceneManager.LoadScene("IntroVideo");
     }
 }

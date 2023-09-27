@@ -16,7 +16,7 @@ public class BreadSpawn1 : MonoBehaviour
         spawnPosition += new Vector3(UnityEngine.Random.Range(-spawnWidth, spawnWidth), 0, 0);
 
         // Instantiate the TrashItemPrefab and set its SpriteRenderer's sprite
-        GameObject itemObject = Instantiate(breadPrefab, spawnPosition, Quaternion.identity);
+        Instantiate(breadPrefab, spawnPosition, Quaternion.identity);
         
     }
 

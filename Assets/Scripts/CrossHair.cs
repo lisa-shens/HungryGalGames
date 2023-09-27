@@ -10,7 +10,7 @@ public class CrossHair : MonoBehaviour
 	public LineRenderer laserLineRenderer;
 	public SpriteRenderer targetRenderer;
 	private bool rendered = false;
-	public DeerSpawn deerScript;
+	//public DeerSpawn deerScript;
 
 	private void Start()
     {
@@ -19,13 +19,12 @@ public class CrossHair : MonoBehaviour
 
     void Update()
 	{
-
-		if (Input.GetKeyDown(KeyCode.Mouse0) && rendered == false)
+		if (rendered == false)
 		{
 			rendered = true;
 			crosshair = targetRenderer.gameObject;
 			UpdateCrosshair(GetMouseWorldPosition());
-			deerScript.StartSpawning();
+			//deerScript.StartSpawning();
 		}
 		else if (rendered == true && crosshair)
 		{
@@ -37,15 +36,8 @@ public class CrossHair : MonoBehaviour
 			RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
 			if (hit.collider != null)
 			{
-				hit.collider.gameObject.GetComponent<Deer>().onHit();
+				hit.collider.gameObject.GetComponent<PigMovemenet>().onHit();
 			}
-
-			//Vector3 dir3D = crosshair.transform.position - transform.position;
-			//transform.up = dir3D;
-			//dir3D.Normalize();
-			//float angle = Mathf.Atan2(dir3D.y, dir3D.x) * Mathf.Rad2Deg;
-			//angle -= 90;
-			//transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 		}
 	}
 

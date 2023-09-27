@@ -7,7 +7,6 @@ public class Deer : MonoBehaviour
     private Rigidbody2D rb;
     public float speed = 1f;
     public float lifeTime = 5;
-    private float amplitude = 3f;
     private Vector3 originalScale;
 
     private void Start()
