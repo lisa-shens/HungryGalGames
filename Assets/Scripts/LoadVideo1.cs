@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
-public class LoadVideo : MonoBehaviour
+public class LoadVideo1 : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
 

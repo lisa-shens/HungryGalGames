@@ -26,7 +26,6 @@ public class Spear : MonoBehaviour
 			crosshair = targetRenderer.gameObject;
 			UpdateCrosshair(GetMouseWorldPosition());
 			deerScript.StartSpawning();
-
 		}
 		else if (rendered == true && crosshair)
 		{
