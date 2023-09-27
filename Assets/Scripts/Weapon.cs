@@ -2,64 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spear : MonoBehaviour
+public class Weapon : MonoBehaviour
 {
-	public GameObject laserStart;
-	private GameObject crosshair;
-	public GameObject spriteSelected;
-	public LineRenderer laserLineRenderer;
-	public SpriteRenderer targetRenderer;
-	private bool rendered = false;
-	public DeerSpawn deerScript;
+    private Rigidbody2D rb;
 
-	private void Start()
+    private void Start()
     {
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
-	{
+    private void FixedUpdate()
+    {
+        // Get the arrow's velocity
+        Vector2 velocity = rb.velocity;
 
-		if (Input.GetKeyDown(KeyCode.Mouse0) && rendered == false)
-		{
-			rendered = true;
-			crosshair = targetRenderer.gameObject;
-			UpdateCrosshair(GetMouseWorldPosition());
-			deerScript.StartSpawning();
-		}
-		else if (rendered == true && crosshair)
-		{
-			UpdateCrosshair(GetMouseWorldPosition());
+        // Calculate the normalized direction of movement
+        Vector2 normalizedDir = velocity.normalized;
 
-			Vector2 origin = transform.position;
-			Vector2 target = crosshair.transform.position;
-			Vector2 direction = target - origin;
-			RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
-			if (hit.collider != null)
-			{
-				hit.collider.gameObject.GetComponent<Deer>().onHit();
-			}
+        // Set the arrow's right direction to match the normalized direction
+        transform.right = normalizedDir;
+    }
 
-			//Vector3 dir3D = crosshair.transform.position - transform.position;
-			//transform.up = dir3D;
-			//dir3D.Normalize();
-			//float angle = Mathf.Atan2(dir3D.y, dir3D.x) * Mathf.Rad2Deg;
-			//angle -= 90;
-			//transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-		}
-	}
-
-	Vector3 GetMouseWorldPosition()
-	{
-		Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		mouseWorldPos.z = 0;
-		return mouseWorldPos;
-	}
-
-	void UpdateCrosshair(Vector3 newCrosshairPosition)
-	{
-		crosshair.transform.position = newCrosshairPosition;
-		laserLineRenderer.SetPosition(0, laserStart.transform.position);
-		laserLineRenderer.SetPosition(1, crosshair.transform.position);
-	}
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+    //    if (player != null)
+    //    {
+    //        Destroy(player);
+    //        // losing screen
+    //    } else
+    //    {
+    //        return;
+    //    }
+    //}
 }
