@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b24af69030f2346ff889b1c8d2c2a6c9
+guid: 3fbbc81b4a64e47ce96d3b1a9986e3cb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,7 +121,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Screenshot 2023-09-27 at 11.27.07 AM_0
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 120
+        width: 89
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c34bd58ed344b1487f66c44b49ba26
+      internalID: -453807906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pots
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 108
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0ac5b9f2eaac42819424740464f7e51
+      internalID: -567754846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Screenshot 2023-09-27 at 11.27.07 AM_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 998
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7319dbb2ecad4ac3aa8a35ef20dd9f9
+      internalID: 706228024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +195,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pots: -567754846
+      Screenshot 2023-09-27 at 11.27.07 AM_0: -453807906
+      Screenshot 2023-09-27 at 11.27.07 AM_1: 706228024
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
