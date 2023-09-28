@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
-public class LoadVideo1 : MonoBehaviour
+public class LoadForestDirections : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
 
@@ -16,6 +16,6 @@ public class LoadVideo1 : MonoBehaviour
     void OnVideoEnd(VideoPlayer vp)
     {
         // Load a new scene when the video ends
-        SceneManager.LoadScene("ForestGame");
+        SceneManager.LoadScene("IntroForestGame");
     }
 }

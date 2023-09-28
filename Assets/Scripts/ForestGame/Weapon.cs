@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Weapon : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Weapon : MonoBehaviour
     public float rotationSpeed = 60;
     public float speed = 1;
     Vector2 direction = new Vector2();
+    
 
     private void Start()
     {
@@ -19,7 +22,9 @@ public class Weapon : MonoBehaviour
         direction = new Vector2(0, -1);
         // normalize direction so it does not impact the travel speed
         direction.Normalize();
+        
     }
+  
 
     private void FixedUpdate()
     {
@@ -37,4 +42,5 @@ public class Weapon : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
 }

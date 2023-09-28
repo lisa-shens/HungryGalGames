@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene4.unity
     guid: 290d1b6d40c0b4f658fb5281e873fff5
   - enabled: 1
+    path: Assets/Scenes/IntroVideo.unity
+    guid: 69fc3819ecb6d40d2b4d37460fe11fa0
+  - enabled: 1
     path: Assets/Scenes/ShowcaseScene.unity
     guid: f6d705d4542184f00a75a31ba2ecc763
   - enabled: 1
