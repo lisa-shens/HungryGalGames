@@ -1,19 +1,37 @@
 using UnityEngine;
+using TMPro;
 
 public class Berry : MonoBehaviour
 {
-    public PointsManager pointsManager; // Reference to the PointsManager
+    private TMP_Text scoreText;
+    private int score;
+    public GameObject berry;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Start()
+    {
+        scoreText = GameObject.Find("Points").GetComponent<TMP_Text>();
+        score = 0;
+    }
+
+    private void Update()
+    {
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
     {
         PlayerController player = collision.gameObject.GetComponent<PlayerController>();
         if (player != null)
         {
-            // Destroy the berry when touched by the player
-            Destroy(gameObject);
-
-            // Add points to the PointsManager
-            pointsManager.AddPoints(3);
+            collectBerry();
+            print(score);
         }
+    }
+
+    public void collectBerry()
+    {
+        Destroy(gameObject);
+        score++;
+        scoreText.text = "Berries: " + score;
     }
 }

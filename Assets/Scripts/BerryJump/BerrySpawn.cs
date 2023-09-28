@@ -25,6 +25,7 @@ public class BlueberrySpawn : MonoBehaviour
         }
 
     }
+
     void SpawnBlueberry()
     {
         // Find all platforms with the "Platform" tag
