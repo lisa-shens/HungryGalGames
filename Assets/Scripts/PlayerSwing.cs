@@ -10,13 +10,12 @@ public class PlayerSwing : MonoBehaviour
     public float shootAngle = 330.0f;
     public float horizontalOffset = 1.0f;
     public float rateOfFire = 1.0f; // Shots per second
-    public Animator animator; // Reference to the Animator component
+    public Animator animator;
     private float lastTimeFired = 0.0f;
     private bool canShoot = true; // Indicates if the player can shoot
 
     private void Start()
     {
-        // Make sure to get the Animator component in the Start method.
         animator = GetComponent<Animator>();
     }
 
@@ -24,17 +23,17 @@ public class PlayerSwing : MonoBehaviour
     {
         if (canShoot && Input.GetKeyDown(KeyCode.Q))
         {
-            animator.SetTrigger("PlayerSwinging"); // Trigger the animation
+            animator.SetTrigger("PlayerSwinging"); 
             Shoot(spearPrefab);
         }
         else if (canShoot && Input.GetKeyDown(KeyCode.W))
         {
-            animator.SetTrigger("PlayerSwinging"); // Trigger the animation
+            animator.SetTrigger("PlayerSwinging"); 
             Shoot(arrowPrefab);
         }
         else if (canShoot && Input.GetKeyDown(KeyCode.E))
         { 
-            animator.SetTrigger("PlayerSwinging"); // Trigger the animation
+            animator.SetTrigger("PlayerSwinging"); 
             Shoot(starPrefab);
         }
     }
