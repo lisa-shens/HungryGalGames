@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 459614181}
   - component: {fileID: 459614180}
   m_Layer: 0
-  m_Name: star
+  m_Name: Star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd81639748534d70b26f2c7c6370beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointsText: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!1 &804439927
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,10 +707,10 @@ MonoBehaviour:
   spearPrefab: {fileID: 1683848599852993148, guid: 662e318f4d54845ca9a88b4143bce6e5, type: 3}
   starPrefab: {fileID: 7326905550192641694, guid: b8ac27405ce2144809d97ad467fbbc89, type: 3}
   spawnPoint: {fileID: 1218776901}
-  speed: 10
-  shootAngle: 330
+  speed: 9.5
+  shootAngle: 40
   horizontalOffset: 1
-  rateOfFire: 1
+  rateOfFire: 2
   animator: {fileID: 0}
 --- !u!212 &1218776900
 SpriteRenderer:
@@ -773,7 +773,7 @@ Transform:
   m_GameObject: {fileID: 1218776898}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.85, y: 2.64, z: 0}
+  m_LocalPosition: {x: -6.2, y: 2.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 1815588336}
   - component: {fileID: 1815588337}
   m_Layer: 0
-  m_Name: DeerSpawn
+  m_Name: AnimalSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1066,9 +1066,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 1106003119}
   - {fileID: 780476626}
-  - {fileID: 1315449712}
-  - {fileID: 804439929}
   - {fileID: 53868488}
   - {fileID: 1815588335}
   - {fileID: 1218776901}
+  - {fileID: 1315449712}
+  - {fileID: 804439929}
   - {fileID: 459614181}

@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float lifetime = 3.0f;
-    public float rotationSpeed = 40;
+    public float rotationSpeed = 60;
     public float speed = 1;
     Vector2 direction = new Vector2();
 
@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
     {
         
         transform.position = transform.position + new Vector3(direction.x, direction.y, 0) * speed * Time.deltaTime;
-        transform.rotation *= Quaternion.AngleAxis(rotationSpeed * Time.deltaTime, Vector3.forward);
+        transform.rotation *= Quaternion.AngleAxis(rotationSpeed * Time.deltaTime, -Vector3.forward);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
