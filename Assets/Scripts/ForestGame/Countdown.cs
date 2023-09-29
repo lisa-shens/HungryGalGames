@@ -38,7 +38,7 @@ public class Countdown : MonoBehaviour
     private IEnumerator ChangeBackgroundWithDelay()
     {
         yield return new WaitForSeconds(5f); // Wait for 5 seconds
-        SceneManager.LoadScene("IntroVideo");
+        SceneManager.LoadScene("Scene2");
     }
 }
 
