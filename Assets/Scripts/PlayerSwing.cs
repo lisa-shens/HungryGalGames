@@ -13,6 +13,11 @@ public class PlayerSwing : MonoBehaviour
     public Animator animator;
     private float lastTimeFired = 0.0f;
     private bool canShoot = true; // Indicates if the player can shoot
+    public AudioClip spearSound;
+    public AudioClip arrowSound;
+    public AudioClip starSound;
+
+
 
     private void Start()
     {
@@ -25,16 +30,19 @@ public class PlayerSwing : MonoBehaviour
         {
             animator.SetTrigger("PlayerSwinging"); 
             Shoot(spearPrefab);
+            AudioSource.PlayClipAtPoint(spearSound, transform.position);
         }
         else if (canShoot && Input.GetKeyDown(KeyCode.W))
         {
             animator.SetTrigger("PlayerSwinging"); 
             Shoot(arrowPrefab);
+            AudioSource.PlayClipAtPoint(arrowSound, transform.position);
         }
         else if (canShoot && Input.GetKeyDown(KeyCode.E))
         { 
             animator.SetTrigger("PlayerSwinging"); 
             Shoot(starPrefab);
+            AudioSource.PlayClipAtPoint(starSound, transform.position);
         }
     }
 

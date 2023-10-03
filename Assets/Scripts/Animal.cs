@@ -16,6 +16,8 @@ public class Animal : MonoBehaviour
 
     private int currentFrameIndex = 0;
     private float frameTimer;
+    public AudioClip deerKillSound;
+    public GameObject bloodPrefab;
 
     private void Start()
     {
@@ -60,5 +62,7 @@ public class Animal : MonoBehaviour
     public void onHit()
     {
         Destroy(gameObject);
+        AudioSource.PlayClipAtPoint(deerKillSound, transform.position);
+        Instantiate(bloodPrefab, transform.position, transform.rotation);
     }
 }
