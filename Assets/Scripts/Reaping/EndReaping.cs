@@ -28,7 +28,7 @@ public class EndReaping : MonoBehaviour
             countdownText.gameObject.SetActive(true);
             button1.gameObject.SetActive(false);
             button2.gameObject.SetActive(false);
-            countdownText.text = ReapingName.score + "entries? Risky move... Best of luck to you.";
+            countdownText.text = ReapingName.score + " entries? Risky move... Best of luck to you.";
             StartCoroutine(ChangeBackgroundWithDelay());
         }
     }

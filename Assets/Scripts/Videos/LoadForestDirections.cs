@@ -12,7 +12,7 @@ public class LoadForestDirections : MonoBehaviour
         videoPlayer.loopPointReached += OnVideoEnd;
     }
 
-    
+
     void OnVideoEnd(VideoPlayer vp)
     {
         // Load a new scene when the video ends

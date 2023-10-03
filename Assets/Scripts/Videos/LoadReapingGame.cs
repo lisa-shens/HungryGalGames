@@ -10,6 +10,7 @@ public class LoadIntroVideo : MonoBehaviour
     {
         videoPlayer = GetComponent<VideoPlayer>();
         videoPlayer.loopPointReached += OnVideoEnd;
+
     }
 
     

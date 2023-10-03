@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Interview : MonoBehaviour
 {
-
     public List<InterviewQuestions> QnA;
     public GameObject[] options;
     public int currentQuestion;
@@ -20,9 +20,22 @@ public class Interview : MonoBehaviour
 
     public void moveOn()
     {
-        QnA.RemoveAt(currentQuestion);
-        generateQuestion();
-        
+        if (currentQuestion >= 0 && currentQuestion < QnA.Count)
+        {
+            QnA.RemoveAt(currentQuestion);
+            if (QnA.Count == 0)
+            {
+                SceneManager.LoadScene("Scene4"); // Transition to the next scene when all questions are answered.
+            }
+            else
+            {
+                generateQuestion();
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Invalid currentQuestion index.");
+        }
     }
 
     void SetAnswers()
@@ -31,7 +44,7 @@ public class Interview : MonoBehaviour
         {
             options[i].GetComponent<InterviewAnswers>().cheer = false;
             options[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = QnA[currentQuestion].Answers[i];
-            if(QnA[currentQuestion].CorrectAnswer == i + 1)
+            if (QnA[currentQuestion].CorrectAnswer == i + 1)
             {
                 options[i].GetComponent<InterviewAnswers>().cheer = true;
             }
@@ -40,10 +53,16 @@ public class Interview : MonoBehaviour
 
     void generateQuestion()
     {
-        currentQuestion = Random.Range(0, QnA.Count);
-
-        QuestionText.text = QnA[currentQuestion].Question;
-
-        SetAnswers();
+        if (QnA.Count > 0)
+        {
+            currentQuestion = Random.Range(0, QnA.Count);
+            Debug.Log("Generated currentQuestion: " + currentQuestion);
+            QuestionText.text = QnA[currentQuestion].Question;
+            SetAnswers();
+        }
+        else
+        {
+            Debug.LogWarning("No more questions available.");
+        }
     }
 }
