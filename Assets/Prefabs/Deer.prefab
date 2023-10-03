@@ -109,7 +109,7 @@ MonoBehaviour:
   - {fileID: -1678232329, guid: 0e86b19703eab48c398589ffa0aecd39, type: 3}
   - {fileID: -105749944, guid: 0e86b19703eab48c398589ffa0aecd39, type: 3}
   - {fileID: -220273618, guid: 0e86b19703eab48c398589ffa0aecd39, type: 3}
-  deerKillSound: {fileID: 0}
+  deerKillSound: {fileID: 8300000, guid: 33fda550e98d143769006d4eddb2a08f, type: 3}
   bloodPrefab: {fileID: 3956836823663290231, guid: ab3f309a360ec417592981b5ca780bcc, type: 3}
 --- !u!50 &4534214676764034911
 Rigidbody2D:

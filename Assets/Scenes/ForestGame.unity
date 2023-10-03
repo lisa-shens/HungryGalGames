@@ -636,9 +636,9 @@ MonoBehaviour:
   horizontalOffset: 1
   rateOfFire: 2
   animator: {fileID: 0}
-  spearSound: {fileID: 0}
-  arrowSound: {fileID: 0}
-  starSound: {fileID: 0}
+  spearSound: {fileID: 8300000, guid: 84a6dbfab2d6546ebb96630d5f5db96a, type: 3}
+  arrowSound: {fileID: 8300000, guid: 71f5be771059b400fb480caa9f4148e6, type: 3}
+  starSound: {fileID: 8300000, guid: 3d819b7c60b8c4985b29a28fab82bc96, type: 3}
 --- !u!212 &1218776900
 SpriteRenderer:
   m_ObjectHideFlags: 0
