@@ -28,7 +28,7 @@ public class EndShowcase : MonoBehaviour
     private IEnumerator ChangeBackgroundWithDelay()
     {
         yield return new WaitForSeconds(5f); // Wait for 5 seconds
-        SceneManager.LoadScene("Scene5");
+        SceneManager.LoadScene("Scene4");
     }
 }
 

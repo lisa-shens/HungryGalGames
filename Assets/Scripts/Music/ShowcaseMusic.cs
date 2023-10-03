@@ -5,7 +5,7 @@ public class ShowcaseMusic: MonoBehaviour
     private AudioSource _audioSource;
     private void Awake()
     {
-        GameObject.FindGameObjectWithTag("Music").GetComponent<InterviewMusic>().StopMusic();
+        GameObject.FindGameObjectWithTag("InterviewMusic").GetComponent<InterviewMusic>().StopMusic();
         DontDestroyOnLoad(transform.gameObject);
         _audioSource = GetComponent<AudioSource>();
     }

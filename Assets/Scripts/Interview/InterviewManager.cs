@@ -25,7 +25,7 @@ public class Interview : MonoBehaviour
             QnA.RemoveAt(currentQuestion);
             if (QnA.Count == 0)
             {
-                SceneManager.LoadScene("Scene4"); // Transition to the next scene when all questions are answered.
+                SceneManager.LoadScene("Scene3"); // Transition to the next scene when all questions are answered.
             }
             else
             {
