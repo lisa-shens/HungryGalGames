@@ -11,6 +11,12 @@ public class BeginGame : MonoBehaviour
     public TMP_Text oddsText;
     public Button button;
     public TMP_Text countdown;
+    public static string playerName;
+
+    public static string getName()
+    {
+        return playerName;
+    }
 
     private void Start()
     {
@@ -34,7 +40,7 @@ public class BeginGame : MonoBehaviour
     public void UpdateWelcomeText()
     {
         welcomeText.gameObject.SetActive(true);
-        string playerName = nameInputField.text;
+        playerName = nameInputField.text;
         welcomeText.text = "Welcome, " + playerName + "... are you ready?";
         StartCoroutine(FadeInText(welcomeText));
         StartCoroutine(openButton(playerName));

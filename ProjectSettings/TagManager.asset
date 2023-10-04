@@ -9,6 +9,7 @@ TagManager:
   - IntroMusic
   - InterviewMusic
   - ShowcaseMusic
+  - FallenSign
   layers:
   - Default
   - TransparentFX
