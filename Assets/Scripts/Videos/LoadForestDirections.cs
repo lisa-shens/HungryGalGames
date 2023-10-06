@@ -1,21 +1,20 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Video;
 
 public class LoadForestDirections : MonoBehaviour
 {
-    private VideoPlayer videoPlayer;
+    public AudioClip sound;
 
-    private void Start()
+    public void onClick()
     {
-        videoPlayer = GetComponent<VideoPlayer>();
-        videoPlayer.loopPointReached += OnVideoEnd;
+        AudioSource.PlayClipAtPoint(sound, transform.position);
+        StartCoroutine(openButton());
     }
 
-
-    void OnVideoEnd(VideoPlayer vp)
+    private IEnumerator openButton()
     {
-        // Load a new scene when the video ends
+        yield return new WaitForSeconds(6f);
         SceneManager.LoadScene("IntroForestGame");
     }
 }

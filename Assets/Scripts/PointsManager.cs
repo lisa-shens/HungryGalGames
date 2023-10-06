@@ -3,17 +3,18 @@ using TMPro;
 
 public class PointsManager : MonoBehaviour
 {
-    public TMP_Text scoreText;
-    private float score = 0;
+    public TMP_Text points;
+    private static float score;
 
-    private float getScore()
+    public float getScore()
     {
         return score;
     }
 
-    public void CollectBerry()
+    // Start is called before the first frame update
+    public void updatePoints(float inc)
     {
-        score += 3;
-        scoreText.text = "Berries: " + getScore();
+        score += inc;
+        points.text = "Points: " + score;
     }
 }

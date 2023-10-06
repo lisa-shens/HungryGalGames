@@ -5,17 +5,22 @@ using TMPro;
 
 public class ReapingName : MonoBehaviour
 {
-    public TMP_Text scoreText;
-    public static int score = 0;
+    private PointsManager pointsManager;
+    public float breadCount = 0;
+
+    private void Start()
+    {
+        pointsManager = GameObject.Find("PointsManager").GetComponent<PointsManager>();
+    }
 
     public void PlaceAName()
     {
-        score++;
-        scoreText.text = "Entries: " + score;
+        breadCount += 1;
+        pointsManager.updatePoints(2f);
     }
 
-    public int getScore()
+    public float getBreads()
     {
-        return score;
+        return breadCount;
     }
 }

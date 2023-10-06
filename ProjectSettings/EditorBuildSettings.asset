@@ -54,6 +54,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene4.unity
     guid: c82d1f51ffb594ec7855c5f9bbe124cb
   - enabled: 1
+    path: Assets/Scenes/BeginGameOutro.unity
+    guid: fadabb6de8951449587144b63c4ebdc3
+  - enabled: 1
     path: Assets/Scenes/Berry Jump.unity
     guid: d1aa4a2c1441d4c9d9edbae4d0df132d
   - enabled: 1

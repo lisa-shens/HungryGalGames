@@ -10,10 +10,4 @@ public class ForestMusic : MonoBehaviour
     {
         GameObject.FindGameObjectWithTag("IntroMusic").GetComponent<MusicIntro>().StopMusic();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

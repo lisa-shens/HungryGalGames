@@ -29,8 +29,8 @@ public class BeginGame : MonoBehaviour
 
     private void Update()
     {
-        string userInput = Input.inputString;
-        nameInputField.text += userInput;
+        //string userInput = Input.inputString;
+        //nameInputField.text += userInput;
         if (Input.GetKeyDown(KeyCode.Return))
         {
             UpdateWelcomeText();

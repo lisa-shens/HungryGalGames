@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Animal : MonoBehaviour
@@ -11,6 +12,7 @@ public class Animal : MonoBehaviour
     public float lifeTime = 5f;
     float randomizedSpeed;
     public float framesPerSecond = 5.0f;
+    private PointsManager pointsManager;
 
     public Sprite[] frames;
 
@@ -23,10 +25,11 @@ public class Animal : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-      
+
         frameTimer = 1.0f / framesPerSecond;
 
         randomizedSpeed = Random.Range(minSpeed, maxSpeed);
+        pointsManager = GameObject.Find("PointsManager").GetComponent<PointsManager>();
     }
 
     private void Update()
@@ -64,5 +67,6 @@ public class Animal : MonoBehaviour
         Destroy(gameObject);
         AudioSource.PlayClipAtPoint(deerKillSound, transform.position);
         Instantiate(bloodPrefab, transform.position, transform.rotation);
+        pointsManager.updatePoints(1f);
     }
 }

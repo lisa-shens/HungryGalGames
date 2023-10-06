@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BeginGameButton : MonoBehaviour
 {
@@ -15,12 +16,12 @@ public class BeginGameButton : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void onClick()
     {
-        
+        StartCoroutine(openButton());
     }
 
-    private IEnumerator openButton(string playerName)
+    private IEnumerator openButton()
     {
         yield return new WaitForSeconds(1f); // Wait for 5 seconds
         countdown.text = "3";
@@ -28,5 +29,7 @@ public class BeginGameButton : MonoBehaviour
         countdown.text = "3";
         yield return new WaitForSeconds(1f); // Wait for 5 seconds
         countdown.text = "1";
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("BeginGameOutro");
     }
 }

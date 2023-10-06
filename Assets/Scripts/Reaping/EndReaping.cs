@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,11 +10,15 @@ public class EndReaping : MonoBehaviour
     private float currentTime;
     public GameObject button1;
     public GameObject button2;
+    private ReapingName reapingName;
+    private PointsManager pointsManager;
 
     void Start()
     {
         currentTime = countdownTime;
         countdownText.gameObject.SetActive(false);
+        pointsManager = GameObject.Find("PointsManager").GetComponent<PointsManager>();
+        pointsManager.updatePoints(0f);
     }
 
     void Update()
@@ -28,7 +31,7 @@ public class EndReaping : MonoBehaviour
             countdownText.gameObject.SetActive(true);
             button1.gameObject.SetActive(false);
             button2.gameObject.SetActive(false);
-            countdownText.text = ReapingName.score + " entries? Risky move... Best of luck to you.";
+            countdownText.text = reapingName.getBreads() + " entries? Risky move... Best of luck to you.";
             StartCoroutine(ChangeBackgroundWithDelay());
         }
     }

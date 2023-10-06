@@ -16,7 +16,7 @@ public class Berry : MonoBehaviour
         if (player != null)
         {
             Destroy(gameObject);
-            pointsManager.CollectBerry(); 
+            pointsManager.updatePoints(3f); 
         }
     }
 }
