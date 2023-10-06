@@ -8,23 +8,21 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     private float moveX;
-    private bool isJumping = false; // Flag to track if the player is jumping
-    private bool isJumpAnimationPlaying = false; // Flag to track if the jump animation is playing
-    [Tooltip("The individual sprites of the animation")]
+    private bool isJumping = false;
+    private bool isJumpAnimationPlaying = false;
     public Sprite[] frames;
-    [Tooltip("How fast does the animation play")]
-    public float framesPerSecond = 10.0f; // Increased frames per second for smoother animation
-
+    public float framesPerSecond = 10.0f;
+    private float fallTimer = 0f;
+ 
     SpriteRenderer spriteRenderer;
     public Sprite spriteSide;
-
-    private bool isFalling = false; // Flag to track if the player is falling
-    private float fallTimer = 0f;
+    private Color originalColor; // Store the player's original color
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        originalColor = spriteRenderer.color; // Store the original color
     }
 
     private void Update()
@@ -78,9 +76,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        isJumping = true;
         if (collision.gameObject.CompareTag("Platform"))
         {
-            isJumping = false; // Reset the jump flag
             FindObjectOfType<SceneTransition>().ResetFalling(); // Reset the fall timer
         }
         else
@@ -95,8 +93,8 @@ public class PlayerController : MonoBehaviour
         Animal animal = collision.gameObject.GetComponent<Animal>();
         if (animal != null)
         {
-
-            // change to next scene
+            // Play the hurt animation (flash red)
+            StartCoroutine(HurtAnimation());
         }
     }
 
@@ -127,5 +125,12 @@ public class PlayerController : MonoBehaviour
 
         // Start the fall timer
         FindObjectOfType<SceneTransition>().StartFalling();
+    }
+
+    IEnumerator HurtAnimation()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.color = originalColor;
     }
 }
