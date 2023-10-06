@@ -36,7 +36,7 @@ public class CrossHair : MonoBehaviour
 			RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
 			if (hit.collider != null)
 			{
-				hit.collider.gameObject.GetComponent<PigMovemenet>().onHit();
+				hit.collider.gameObject.GetComponent<onAppleHIt>().onHit();
 			}
 		}
 	}

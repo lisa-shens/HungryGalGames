@@ -6,23 +6,25 @@ using UnityEngine.SceneManagement;
 
 public class EndShowcase : MonoBehaviour
 {
-    public float countdownTime = 30.0f; // The countdown time in seconds
-    private float currentTime;
+    public TMP_Text endText;
+    public Sprite backgroundB;
+    private SpriteRenderer spriteRenderer;
 
-    void Start()
+    private void Start()
     {
-        currentTime = countdownTime;
+        endText.gameObject.SetActive(false);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.enabled = false;
     }
 
-    void Update()
+    public void end()
     {
-        currentTime -= Time.deltaTime;
-
-        if (currentTime <= 0)
-        {
-            currentTime = 0;
-            StartCoroutine(ChangeBackgroundWithDelay());
-        }
+        print("end");
+        endText.gameObject.SetActive(true);
+        endText.text = "You have successfully calibrated your weapon.";
+        StartCoroutine(ChangeBackgroundWithDelay());
+        spriteRenderer.enabled = true; // Turn on the sprite
+        spriteRenderer.sprite = backgroundB;
     }
 
     private IEnumerator ChangeBackgroundWithDelay()
