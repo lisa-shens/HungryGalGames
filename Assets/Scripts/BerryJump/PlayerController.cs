@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public Sprite spriteSide;
 
+    private bool isFalling = false; // Flag to track if the player is falling
+    private float fallTimer = 0f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -34,6 +37,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(JumpAnimation());
         }
 
+        // Check for left arrow input and not in a jump animation
         else if (Input.GetKey(KeyCode.LeftArrow) && !isJumpAnimationPlaying)
         {
             // Player is moving left
@@ -41,14 +45,29 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
         }
 
+        // Check for right arrow input and not in a jump animation
         else if (Input.GetKey(KeyCode.RightArrow) && !isJumpAnimationPlaying)
         {
             // Player is moving right
             spriteRenderer.sprite = spriteSide;
             spriteRenderer.flipX = false;
         }
-    }
 
+        // Check if the player is continuously falling
+        if (rb.velocity.y < 0f && !isJumping)
+        {
+            fallTimer += Time.deltaTime;
+
+            if (fallTimer >= 2f) // Player falls for 2 seconds continuously
+            {
+                FindObjectOfType<SceneTransition>().StartFalling();
+            }
+        }
+        else
+        {
+            fallTimer = 0f; // Reset the timer if the player jumps or lands on a platform
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -59,7 +78,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        isJumping = true;
+        if (collision.gameObject.CompareTag("Platform"))
+        {
+            isJumping = false; // Reset the jump flag
+            FindObjectOfType<SceneTransition>().ResetFalling(); // Reset the fall timer
+        }
+        else
+        {
+            // Player has fallen off the platform, trigger the fall timer
+            StartCoroutine(StartFallTimer());
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -67,7 +95,7 @@ public class PlayerController : MonoBehaviour
         Animal animal = collision.gameObject.GetComponent<Animal>();
         if (animal != null)
         {
-            
+
             // change to next scene
         }
     }
@@ -92,6 +120,12 @@ public class PlayerController : MonoBehaviour
         isJumping = false; // Set isJumping to false to indicate the jump animation is complete
     }
 
+    IEnumerator StartFallTimer()
+    {
+        // Wait for 2 seconds before starting the fall timer
+        yield return new WaitForSeconds(2f);
 
-
+        // Start the fall timer
+        FindObjectOfType<SceneTransition>().StartFalling();
+    }
 }
