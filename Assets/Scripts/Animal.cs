@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+// Applies to tracker jacket bees and deer
+
 public class Animal : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -62,6 +64,7 @@ public class Animal : MonoBehaviour
         }
     }
 
+    // Add one point for each animal killed
     public void onHit()
     {
         Destroy(gameObject);

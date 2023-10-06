@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Camera follows player as they jump
 public class CameraFollow : MonoBehaviour
 {
     public Transform player;

@@ -11,7 +11,7 @@ public class Berry : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Increment berries score
+        // Increment 3 points for each berry collected
         PlayerController player = collision.gameObject.GetComponent<PlayerController>();
         if (player != null)
         {

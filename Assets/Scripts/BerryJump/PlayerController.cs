@@ -22,20 +22,19 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        originalColor = spriteRenderer.color; // Store the original color
+        originalColor = spriteRenderer.color;
     }
 
+    // Check for input and jump animation status
     private void Update()
     {
         moveX = Input.GetAxis("Horizontal") * speed;
 
-        // Check for jump input only if not already in a jump animation
         if (isJumping == true && !isJumpAnimationPlaying)
         {
             StartCoroutine(JumpAnimation());
         }
 
-        // Check for left arrow input and not in a jump animation
         else if (Input.GetKey(KeyCode.LeftArrow) && !isJumpAnimationPlaying)
         {
             // Player is moving left
@@ -43,7 +42,6 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
         }
 
-        // Check for right arrow input and not in a jump animation
         else if (Input.GetKey(KeyCode.RightArrow) && !isJumpAnimationPlaying)
         {
             // Player is moving right
@@ -63,7 +61,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            fallTimer = 0f; // Reset the timer if the player jumps or lands on a platform
+            fallTimer = 0f; // Reset timer if player jumps or lands on a platform
         }
     }
 
@@ -79,11 +77,11 @@ public class PlayerController : MonoBehaviour
         isJumping = true;
         if (collision.gameObject.CompareTag("Platform"))
         {
-            FindObjectOfType<SceneTransition>().ResetFalling(); // Reset the fall timer
+            FindObjectOfType<SceneTransition>().ResetFalling(); // Reset fall timer
         }
         else
         {
-            // Player has fallen off the platform, trigger the fall timer
+            // Player has fallen off the platform, trigger fall timer
             StartCoroutine(StartFallTimer());
         }
     }
@@ -100,7 +98,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator JumpAnimation()
     {
-        isJumpAnimationPlaying = true; // Set the flag to indicate that the jump animation is playing
+        isJumpAnimationPlaying = true; 
 
         // The time each frame should be displayed
         float frameDuration = 1.0f / framesPerSecond;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Spawns an animal from lefthand of screen
 public class AnimalSpawn : MonoBehaviour
 {
     public float spawnWidth = 1;

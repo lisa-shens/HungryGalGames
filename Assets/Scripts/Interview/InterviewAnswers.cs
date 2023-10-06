@@ -13,7 +13,6 @@ public class InterviewAnswers : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-
     }
 
     public void Answer()

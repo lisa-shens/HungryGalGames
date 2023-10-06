@@ -11,7 +11,6 @@ public class PointsManager : MonoBehaviour
         return score;
     }
 
-    // Start is called before the first frame update
     public void updatePoints(float inc)
     {
         score += inc;
