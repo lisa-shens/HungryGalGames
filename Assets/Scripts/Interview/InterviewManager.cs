@@ -44,7 +44,7 @@ public class Interview : MonoBehaviour
         {
             options[i].GetComponent<InterviewAnswers>().cheer = false;
             options[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = QnA[currentQuestion].Answers[i];
-            if (QnA[currentQuestion].CorrectAnswer == i + 1)
+            if (QnA[currentQuestion].CorrectAnswer == i)
             {
                 options[i].GetComponent<InterviewAnswers>().cheer = true;
             }
@@ -56,13 +56,9 @@ public class Interview : MonoBehaviour
         if (QnA.Count > 0)
         {
             currentQuestion = Random.Range(0, QnA.Count);
-            Debug.Log("Generated currentQuestion: " + currentQuestion);
             QuestionText.text = QnA[currentQuestion].Question;
             SetAnswers();
         }
-        else
-        {
-            Debug.LogWarning("No more questions available.");
-        }
+
     }
 }
