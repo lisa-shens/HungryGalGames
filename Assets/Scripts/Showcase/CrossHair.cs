@@ -19,26 +19,26 @@ public class CrossHair : MonoBehaviour
 
     void Update()
 	{
-		if (rendered == false)
-		{
-			rendered = true;
-			crosshair = targetRenderer.gameObject;
-			UpdateCrosshair(GetMouseWorldPosition());
-			//deerScript.StartSpawning();
-		}
-		else if (rendered == true && crosshair)
-		{
-			UpdateCrosshair(GetMouseWorldPosition());
+		//if (rendered == false)
+		//{
+		//	rendered = true;
+		//	crosshair = targetRenderer.gameObject;
+		//	UpdateCrosshair(GetMouseWorldPosition());
+		//	//deerScript.StartSpawning();
+		//}
+		//else if (rendered == true && crosshair)
+		//{
+		//	UpdateCrosshair(GetMouseWorldPosition());
 
-			Vector2 origin = transform.position;
-			Vector2 target = crosshair.transform.position;
-			Vector2 direction = target - origin;
-			RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
-			if (hit.collider != null)
-			{
-				hit.collider.gameObject.GetComponent<onAppleHIt>().onHit();
-			}
-		}
+		//	Vector2 origin = transform.position;
+		//	Vector2 target = crosshair.transform.position;
+		//	Vector2 direction = target - origin;
+		//	RaycastHit2D hit = Physics2D.Raycast(origin, direction, direction.magnitude);
+		//	if (hit.collider != null)
+		//	{
+		//		hit.collider.gameObject.GetComponent<onAppleHIt>().onHit();
+		//	}
+		//}
 	}
 
 	Vector3 GetMouseWorldPosition()

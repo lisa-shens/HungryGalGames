@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class onAppleHIt : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class onAppleHIt : MonoBehaviour
             endShowcase.end();
             
         }
-        Destroy(gameObject);
+        //Destroy(button);
     }
 
 
