@@ -16,4 +16,9 @@ public class PointsManager : MonoBehaviour
         score += inc;
         points.text = "Points: " + score;
     }
+
+    public void resetAllPoints()
+    {
+        score = 0;
+    }
 }

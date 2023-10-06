@@ -10,6 +10,7 @@ TagManager:
   - InterviewMusic
   - ShowcaseMusic
   - FallenSign
+  - CountdownMusic
   layers:
   - Default
   - TransparentFX

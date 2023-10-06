@@ -7,7 +7,7 @@ public class LoadForestGame : MonoBehaviour
 
     private void Start()
     {
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicIntro>().StopMusic();
+        GameObject.FindGameObjectWithTag("IntroMusic").GetComponent<MusicIntro>().StopMusic();
     }
 
 

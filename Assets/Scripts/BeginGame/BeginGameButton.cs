@@ -23,13 +23,12 @@ public class BeginGameButton : MonoBehaviour
 
     private IEnumerator openButton()
     {
+        countdown.gameObject.SetActive(true);
         yield return new WaitForSeconds(1f); // Wait for 5 seconds
         countdown.text = "3";
         yield return new WaitForSeconds(1f); // Wait for 5 seconds
-        countdown.text = "3";
+        countdown.text = "2";
         yield return new WaitForSeconds(1f); // Wait for 5 seconds
         countdown.text = "1";
-        yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene("BeginGameOutro");
     }
 }

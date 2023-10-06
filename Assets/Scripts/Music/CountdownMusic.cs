@@ -5,9 +5,9 @@ public class CountdownMusic: MonoBehaviour
     private AudioSource _audioSource;
     private void Awake()
     {
-        GameObject.FindGameObjectWithTag("ShowcaseMusic").GetComponent<ShowcaseMusic>().StopMusic();
         DontDestroyOnLoad(transform.gameObject);
         _audioSource = GetComponent<AudioSource>();
+        GameObject.FindGameObjectWithTag("ShowcaseMusic").GetComponent<ShowcaseMusic>().StopMusic();
     }
 
     public void PlayMusic()

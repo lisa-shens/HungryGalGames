@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class EndReaping : MonoBehaviour
 {
-    public float countdownTime = 30.0f; // The countdown time in seconds
-    public TMP_Text countdownText; // Reference to a Text component to display the countdown
+    public float countdownTime = 30.0f;
+    public TMP_Text countdownText;
     private float currentTime;
     public GameObject button1;
     public GameObject button2;

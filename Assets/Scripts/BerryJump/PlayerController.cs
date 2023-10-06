@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public Sprite[] frames;
     public float framesPerSecond = 10.0f;
     private float fallTimer = 0f;
- 
+    private PointsManager pointsManager;
     SpriteRenderer spriteRenderer;
     public Sprite spriteSide;
     private Color originalColor; // Store the player's original color
@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         originalColor = spriteRenderer.color;
+        pointsManager = GameObject.Find("PointsManager").GetComponent<PointsManager>();
+
     }
 
     // Check for input and jump animation status
@@ -130,5 +132,6 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.color = Color.red;
         yield return new WaitForSeconds(0.2f);
         spriteRenderer.color = originalColor;
+        pointsManager.updatePoints(-10f);
     }
 }

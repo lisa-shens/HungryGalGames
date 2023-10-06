@@ -16,6 +16,7 @@ public class Scene3 : MonoBehaviour
         txt2.gameObject.SetActive(false);
         txt3.gameObject.SetActive(false);
         StartCoroutine(UpdateWelcomeTxt1());
+        GameObject.FindGameObjectWithTag("InterviewMusic").GetComponent<InterviewMusic>().StopMusic();
     }
 
     private IEnumerator UpdateWelcomeTxt1()
@@ -29,7 +30,7 @@ public class Scene3 : MonoBehaviour
         StartCoroutine(FadeInText(txt2));
         yield return new WaitForSeconds(4f);
         txt3.gameObject.SetActive(true);
-        txt3.text = "good luck!";
+        txt3.text = "calibrate your weapon by clicking on each apple";
         StartCoroutine(FadeInText(txt3));
         yield return new WaitForSeconds(4f);
         SceneManager.LoadScene("ShowcaseScene");

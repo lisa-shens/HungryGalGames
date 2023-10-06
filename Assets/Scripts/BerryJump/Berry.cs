@@ -7,6 +7,7 @@ public class Berry : MonoBehaviour
     private void Start()
     {
         pointsManager = GameObject.Find("PointsManager").GetComponent<PointsManager>();
+        GameObject.FindGameObjectWithTag("CountdownMusic").GetComponent<CountdownMusic>().StopMusic();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,7 +17,7 @@ public class Berry : MonoBehaviour
         if (player != null)
         {
             Destroy(gameObject);
-            pointsManager.updatePoints(3f); 
+            pointsManager.updatePoints(5f); 
         }
     }
 }

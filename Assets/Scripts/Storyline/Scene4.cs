@@ -50,7 +50,7 @@ public class Scene4 : MonoBehaviour
         txt7.text = "favor";
         StartCoroutine(FadeInText(txt7));
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Berry Jump");
+        SceneManager.LoadScene("TubeVideo");
     }
 
 

@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class Buttons : MonoBehaviour
 {
+    private PointsManager pointsManager;
+
+    private void Start()
+    {
+        pointsManager = GameObject.Find("PointsManager").GetComponent<PointsManager>();
+
+    }
     // Example function to quit the game
     public void QuitGame()
     {
@@ -20,5 +27,6 @@ public class Buttons : MonoBehaviour
     public void StartOver()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("BeginGame");
+        pointsManager.resetAllPoints();
     }
 }

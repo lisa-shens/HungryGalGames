@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
@@ -5,9 +6,15 @@ using UnityEngine.Video;
 public class LoadBeginGameOutro : MonoBehaviour
 {
 
-    public void nextVideo()
+    public void newVideo()
     {
-        // Load a new scene when the video ends
+        StartCoroutine(newScene());
+    }
+
+private IEnumerator newScene()
+{
+    yield return new WaitForSeconds(3f);
         SceneManager.LoadScene("BeginGameOutro");
+
     }
 }
