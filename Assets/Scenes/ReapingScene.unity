@@ -592,8 +592,8 @@ GameObject:
   - component: {fileID: 597082981}
   - component: {fileID: 597082980}
   - component: {fileID: 597082979}
-  - component: {fileID: 597082982}
   - component: {fileID: 597082983}
+  - component: {fileID: 597082984}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -651,22 +651,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &597082982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 597082977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a91dedba7e74c82aa3e4b53bff84a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countdownTime: 15
-  countdownText: {fileID: 740596615}
-  button1: {fileID: 2121898607}
-  button2: {fileID: 489618427}
 --- !u!82 &597082983
 AudioSource:
   m_ObjectHideFlags: 0
@@ -763,6 +747,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &597082984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597082977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a91dedba7e74c82aa3e4b53bff84a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTime: 30
+  countdownText: {fileID: 740596615}
+  button1: {fileID: 489618427}
+  button2: {fileID: 2121898607}
 --- !u!1 &598663767
 GameObject:
   m_ObjectHideFlags: 0

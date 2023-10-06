@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class EndReaping : MonoBehaviour
 {
-    public float countdownTime = 30.0f;
+    public float countdownTime = 10.0f;
     public TMP_Text countdownText;
     private float currentTime;
     public GameObject button1;
@@ -17,6 +17,7 @@ public class EndReaping : MonoBehaviour
     {
         currentTime = countdownTime;
         countdownText.gameObject.SetActive(false);
+        reapingName = GameObject.Find("NameInPot").GetComponent<ReapingName>();
         pointsManager = GameObject.Find("PointsManager").GetComponent<PointsManager>();
         pointsManager.updatePoints(0f);
     }
