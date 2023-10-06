@@ -9,10 +9,13 @@ public class InterviewAnswers : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip cheerSound;
     public AudioClip booSound;
+    private PointsManager pointsManager;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        pointsManager = GameObject.Find("PointsManager").GetComponent<PointsManager>();
+        pointsManager.updatePoints(0f);
     }
 
     public void Answer()
@@ -22,12 +25,14 @@ public class InterviewAnswers : MonoBehaviour
             // play cheer audio
             audioSource.PlayOneShot(cheerSound);
             interviewManager.moveOn();
+            pointsManager.updatePoints(3f);
         }
         else
         {
             // play boo audio
             audioSource.PlayOneShot(booSound);
             interviewManager.moveOn();
+            pointsManager.updatePoints(-3f);
         }
 
     }
